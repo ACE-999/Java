@@ -16,7 +16,7 @@ public class freq{
 
         for(int i: freq)
         {
-            System.out.print(i);
+            System.out.print(i+" ");
         }
         sc.close();
     }
