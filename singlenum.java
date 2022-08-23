@@ -19,6 +19,7 @@ public class singlenum {
                 return e.getKey();
             }
         }
+        
         return 0;
     }
     public static void main(String[] args) {
