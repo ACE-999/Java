@@ -12,7 +12,7 @@ public class sieve {
         //all non primes are true
         for(int i=2; i*i<=n; i++)
         {
-            for(int j=i+i; j<=n; j+=i)
+            for(int j=i*i; j<=n; j+=i)
             {
                 prime[j]=true;
             }
