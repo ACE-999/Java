@@ -1,5 +1,8 @@
+import java.util.Scanner;
+
 public class cntprime {
-    boolean isPrime(int n)
+
+    static boolean isPrime(int n)
     {
         if(n<=1)
         {
@@ -16,7 +19,7 @@ public class cntprime {
         return true;
     }
     
-    public int countPrimes(int n) {
+    static int countPrimes(int n) {
         
         int cnt=0;
         
@@ -29,5 +32,15 @@ public class cntprime {
         }
         return cnt;
     }
-    
+
+    public static void main(String[] args) {
+        
+        Scanner sc=new Scanner(System.in);
+
+        int n=sc.nextInt();
+        int a=countPrimes(n);
+        System.out.println("Number of Primes: "+a);
+
+        sc.close();
+    }
 }
