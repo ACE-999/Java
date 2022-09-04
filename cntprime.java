@@ -23,7 +23,7 @@ public class cntprime {
         
         int cnt=0;
         
-        for(int i=0; i<n; i++)
+        for(int i=2; i<=n; i++)
         {
             if(isPrime(i))
             {
