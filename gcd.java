@@ -7,7 +7,8 @@ public class gcd {
 
         int a=sc.nextInt();
         int b=sc.nextInt();
-        
+
+        //iterative solution for GCD
         int res=Math.min(a,b);
 
         while(res>0)
