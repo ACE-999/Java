@@ -13,9 +13,9 @@ public class gcdrecur {
             return a;
         else if(a>b)
         {
-            return gcd(a-b,b);
+            return gcd(a%b,b);
         }
-        return gcd(a,b-a);
+        return gcd(a,b%a);
     }
     public static void main(String[] args) {
         

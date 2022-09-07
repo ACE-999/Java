@@ -3,59 +3,48 @@ public class demo {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
 
-        int n=sc.nextInt();
         int m=sc.nextInt();
 
-        int b[]=new int[n];
-        int c[]=new int[n];
+        int h[]=new int[m];
+        int g[]=new int[m];
 
-        //int arr[]=new int[n];
-        int ted[]=new int[n];
-        int choc[]=new int[n];
-
-
-        for(int i=0; i<n; i++)
+        for(int i=0; i<m; i++)
         {
-            b[i]=sc.nextInt();
+            h[i]=sc.nextInt();
         }
-        for(int i=0; i<n; i++)
+        for(int i=0; i<m; i++)
         {
-            c[i]=sc.nextInt();
+            g[i]=sc.nextInt();
         }
 
-        //ted array
-        for(int i=n-1; i>=0; i--)
+        int cnt=0;
+        int ex=0;
+
+        for(int i=0; i<m; i++)
         {
-            if(m-b[i]>b[i])
+            for(int j=0; j<m; j++)
             {
-                ted[i]=b[i];
-            }
-            else if(m-b[i]>0){
-                ted[i]=m-b[i];
-            }
-            else{
-                ted[i]=0;
+                if(h[j]==g[j])
+                {
+                    cnt++;
+                }
+                else{
+                    h[j]=h[j]-1;
+                    h[j+1]=h[j+1]-1;
+                    ex++;
+                }
             }
         }
 
-        //choc array
-        for(int i=n-1; i>=0; i--)
+        if(cnt>=3)
         {
-            if(ted[i]==b[i])
-            {
-                choc[i]=0;
-            }
-            else{
-                choc[i]=c[i]*b[i];
-            }
+            System.out.println(ex);
         }
-
-        int max=choc[0];
-        for(int i=0; i<n; i++)
+        else
         {
-            max=Math.max(max,choc[i]);
+            
         }
 
-        System.out.println("Ans: "+max);
+        sc.close();
     }
 }
