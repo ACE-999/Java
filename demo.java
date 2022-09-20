@@ -3,46 +3,46 @@ public class demo {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
 
-        int m=sc.nextInt();
+        int n=sc.nextInt();
+        int arr[]=new int [n];
+        int t[]=new int [n];
+        
 
-        int h[]=new int[m];
-        int g[]=new int[m];
-
-        for(int i=0; i<m; i++)
+        for(int i=0; i<n; i++)
         {
-            h[i]=sc.nextInt();
-        }
-        for(int i=0; i<m; i++)
-        {
-            g[i]=sc.nextInt();
+            arr[i]=sc.nextInt();
         }
 
-        int cnt=0;
-        int ex=0;
-
-        for(int i=0; i<m; i++)
+        for(int i=0; i<n; i++)
         {
-            for(int j=0; j<m; j++)
+            int cnt=0;
+            for(int j=0; j<n; j++)
             {
-                if(h[j]==g[j])
-                {
+                if(arr[i]==arr[j])
                     cnt++;
+            }
+            
+            //System.out.print("cnt "+cnt);
+            
+            for(int k=0; k<n; k++)
+            {
+                if(t[k]==arr[i])
+                {
+                    continue;
                 }
-                else{
-                    h[j]=h[j]-1;
-                    h[j+1]=h[j+1]-1;
-                    ex++;
+                if((cnt%3)!=0)
+                {   
+                    
+                    t[i]=arr[i];
+                    
                 }
             }
         }
 
-        if(cnt>=3)
+        System.out.println("answer...");
+        for(int i=0; i<n; i++)
         {
-            System.out.println(ex);
-        }
-        else
-        {
-            
+            System.out.print(t[i]+" ");
         }
 
         sc.close();
