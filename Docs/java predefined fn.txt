@@ -1,0 +1,18 @@
+HashMap functions:
+
+get
+put
+containsKey
+entrySet
+getOrDefault
+
+String fn:
+
+s.length()
+s.charAt()
+s1.compareTo(s2)
+	s1>s2 -> return +ve value
+	s1=s2 -> return 0
+	s1<s2 -> return -ve value
+
+

@@ -24,5 +24,7 @@ public class strpalindrome {
             System.out.println("NOT Palindrome!!!");
         else
             System.out.println("Palindrome!!!");
+        
+        sc.close();
     }
 }
